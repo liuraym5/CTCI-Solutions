@@ -144,6 +144,7 @@ def zeroMatrix(matrix):
                 matrix[i][j] = 0;
 
 # 1.9: String Rotation
+
 def stringRotation(s1, s2):
     l = len(s1)
     if l != len(s2):

@@ -41,5 +41,32 @@ class Chapter2Tests(unittest.TestCase):
         second.append(2)
         sum_list = sum_lists(first, second)
         self.assertEqual(str(sum_list), "[2, 1, 9]")
+
+    def test_is_palindrome(self):
+        self.assertFalse(is_palindrome(self.head))
+        n = Node("h")
+        n.append("a")
+        n.append("n")
+        n.append("n")
+        n.append("a")
+        n.append("h")
+        self.assertTrue(is_palindrome(n))
+
+    def test_is_intersecting(self):
+        head1 = Node("3")
+        i = Node("9")
+        i.append("10")
+        head1.append(i)
+        self.head.append(i)
+        self.assertTrue(is_intersecting(head1, self.head))
+
+    def test_is_circular(self):
+        n = Node("3")
+        c = Node("2")
+        n.append(c)
+        n.append("1")
+        n.append(c)
+        self.assertEqual(is_circular(self.head), self.head)
+        self.assertEqual(is_circular(n), c)
 if __name__ == '__main__':
     unittest.main()

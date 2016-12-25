@@ -3,7 +3,7 @@ import unittest
 from chapter1 import *
 
 
-class MyTestCase(unittest.TestCase):
+class Chapter1Tests(unittest.TestCase):
     def test_isUnique(self):
         self.assertTrue(isUnique("abcdefg"))
         self.assertFalse(isUnique("abcbdefg"))

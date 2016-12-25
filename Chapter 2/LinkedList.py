@@ -31,3 +31,4 @@ class Node:
             n.next = node
         else:
             n.next = Node(node)
+
